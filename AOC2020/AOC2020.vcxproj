@@ -76,6 +76,7 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClCompile Include="FileUtil.cpp" />
+    <ClCompile Include="Gameboy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Problem1.cpp" />
     <ClCompile Include="Problem2.cpp" />
@@ -84,11 +85,13 @@
     <ClCompile Include="Problem5.cpp" />
     <ClCompile Include="Problem6.cpp" />
     <ClCompile Include="Problem7.cpp" />
+    <ClCompile Include="Problem8.cpp" />
     <ClCompile Include="StringUtil.cpp" />
     <ClCompile Include="TreeMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileUtil.h" />
+    <ClInclude Include="Gameboy.h" />
     <ClInclude Include="Problems.h" />
     <ClInclude Include="StringUtil.h" />
     <ClInclude Include="TreeMap.h" />

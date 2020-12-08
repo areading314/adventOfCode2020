@@ -23,7 +23,6 @@ namespace AOC2020 {
 	typedef std::unordered_map<std::string, std::vector<BagQuantity>> Graph;
 
 	BagQuantity GetQuantity(const std::string& bagdesc) {
-		// std::cout << "GetQuantity(" << bagdesc << ")" << std::endl;
 		BagQuantity bg;
 		std::vector<std::string> v;
 		AOCUtils::splitString(bagdesc, v, ' ');
@@ -51,18 +50,8 @@ namespace AOC2020 {
 			if (std::regex_search(lastbag, res, singleBagRegex)) {
 				value.push_back(GetQuantity(res[1].str()));
 			}
-			// std::cout << "Line: " << line << std::endl;
+
 			target[key] = value;
-			for (int i = 0; i < 15; i++) {
-				// std::cout << s[i].str() << "/";
-			}
-			// std::cout << std::endl;
-			// std::cout << "got: ";
-			// std::cout << key << "|";
-			// for (auto i = value.begin(); i != value.end(); ++i) {
-		    //    std::cout << (*i).color << "-";
-			// }
-			// std::cout << std::endl;
 		}
 	}
 
@@ -75,13 +64,12 @@ namespace AOC2020 {
 			std::string current = colors.front().first;
 			int currentDepth = colors.front().second;
 			colors.pop();
-			// for (int k = 0; k < currentDepth; k++) std::cout << ">";
 			if (current == "shiny gold" && notfirst) return true;
 			notfirst = true;
-			auto res = *(bags.find(current));
-			auto newcolors = res.second;
+			std::unordered_map<std::string, std::vector<BagQuantity>>::const_iterator res = bags.find(current);
+			auto newcolors = res->second;
 			for (auto i = newcolors.begin(); i != newcolors.end(); ++i) {
-				colors.push(std::make_pair((*i).color, currentDepth + 1));
+				colors.push(std::make_pair(i->color, currentDepth + 1));
 			}
 		}
 		return false;
@@ -93,11 +81,11 @@ namespace AOC2020 {
 		if (res == g.end()) {
 			std::cout << "Error: " << start << " not found in graph. " << std::endl;
 		}
-		if ((*res).second.size() == 0) {
+		if (res->second.size() == 0) {
 			return retval;
 		}
-		for (auto i = (*res).second.begin(); i != (*res).second.end(); ++i) {
-			retval += _recursiveCount(g, (*i).color) * (*i).count;
+		for (auto i = res->second.begin(); i != res->second.end(); ++i) {
+			retval += _recursiveCount(g, i->color) * i->count;
 		}
 		return retval;
 	}
@@ -115,28 +103,11 @@ namespace AOC2020 {
 
 		std::unordered_set<std::string> seenColors;
 		for (auto i = bags.begin(); i != bags.end(); ++i) {
-			if (searchBag((*i).first, bags)) {
-				seenColors.insert((*i).first);
+			if (searchBag(i->first, bags)) {
+				seenColors.insert(i->first);
 			}
 		}
-
-		/*
-		for (auto i = bags.begin(); i != bags.end(); ++i) {
-			std::cout << (*i).first << std::endl;
-			std::cout << "  ";
-			for (auto j = (*i).second.begin(); j != (*i).second.end(); ++j) {
-				std::cout << (*j).count << " " << (*j).color << " | ";
-			}
-			std::cout << std::endl;
-		}
-
-		std::cout << "Possible colors: " << std::endl;
-		for (auto i = seenColors.begin(); i != seenColors.end(); ++i) {
-			std::cout << *i << std::endl;
-		}
-		*/
 		std::cout << "Number of bags with shiny gold potential: " << seenColors.size() << std::endl;
-
 		std::cout << "A shiny gold bag must have " << _recursiveCount(bags, "shiny gold") - 1 << " bags." << std::endl;
 
 		return EXIT_SUCCESS;
