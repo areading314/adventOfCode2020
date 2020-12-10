@@ -79,6 +79,7 @@
     <ClCompile Include="Gameboy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Problem1.cpp" />
+    <ClCompile Include="Problem10.cpp" />
     <ClCompile Include="Problem2.cpp" />
     <ClCompile Include="Problem3.cpp" />
     <ClCompile Include="Problem4.cpp" />
