@@ -86,6 +86,7 @@
     <ClCompile Include="Problem6.cpp" />
     <ClCompile Include="Problem7.cpp" />
     <ClCompile Include="Problem8.cpp" />
+    <ClCompile Include="Problem9.cpp" />
     <ClCompile Include="StringUtil.cpp" />
     <ClCompile Include="TreeMap.cpp" />
   </ItemGroup>
