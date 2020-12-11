@@ -80,6 +80,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Problem1.cpp" />
     <ClCompile Include="Problem10.cpp" />
+    <ClCompile Include="Problem11.cpp" />
     <ClCompile Include="Problem2.cpp" />
     <ClCompile Include="Problem3.cpp" />
     <ClCompile Include="Problem4.cpp" />
@@ -90,11 +91,13 @@
     <ClCompile Include="Problem9.cpp" />
     <ClCompile Include="StringUtil.cpp" />
     <ClCompile Include="TreeMap.cpp" />
+    <ClCompile Include="WaitingArea.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileUtil.h" />
     <ClInclude Include="Gameboy.h" />
     <ClInclude Include="Problems.h" />
+    <ClInclude Include="WaitingArea.h" />
     <ClInclude Include="StringUtil.h" />
     <ClInclude Include="TreeMap.h" />
   </ItemGroup>
