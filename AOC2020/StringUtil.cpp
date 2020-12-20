@@ -1,5 +1,5 @@
 #include <iostream>
-#include "StringUtil.h";
+#include "StringUtil.h"
 
 void AOCUtils::splitString(const std::string& target, std::vector<std::string>& results, char separator) {
 	results.clear();

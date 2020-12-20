@@ -22,6 +22,10 @@ int main()
     functions.push_back(AOC2020::Problem10);
     functions.push_back(AOC2020::Problem11);
     functions.push_back(AOC2020::Problem12);
+    functions.push_back(AOC2020::Problem13);
+    functions.push_back(AOC2020::Problem14);
+    functions.push_back(AOC2020::Problem15);
+    functions.push_back(AOC2020::Problem16);
 
 
     std::cout << "Please enter the problem you would like to solve: " << std::endl;

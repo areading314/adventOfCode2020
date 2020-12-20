@@ -53,7 +53,6 @@ namespace AOC2020 {
 		}
 		adapters.push_back(maxAdapter + 3);
 		std::sort(adapters.begin(), adapters.end());
-		number_t lastAdapter = 0;
 		auto start = adapters.begin();
 		auto next = start + 1;
 		number_t oneCount = 0, threeCount = 0;

@@ -20,12 +20,12 @@ namespace AOC2020 {
 		SeatLocation s;
 		unsigned char low = 0, high = 128, bf = 2;
 
-		for (int i = 0; i < 7; i++) {
+		for (unsigned char i = 0; i < 7; i++) {
 			if (seatString[i] == 'F') {
-				high = low + (high - low) / bf;
+				high = (unsigned char)(low + (unsigned char) (high - low) / bf);
 			}
 			else if (seatString[i] == 'B') {
-				low = high - (high - low) / bf;
+				low = (unsigned char)(high - (unsigned char)(high - low) / bf);
 			}
 			else {
 				std::cout << "this row is FUCKED: " << seatString << std::endl;
@@ -33,12 +33,12 @@ namespace AOC2020 {
 		}
 		s.row = low;
 		unsigned char left = 0, right = 8;
-		for (int i = 7; i < 10; i++) {
+		for (unsigned char i = 7; i < 10; i++) {
 			if (seatString[i] == 'L') {
-				right = left + (right - left) / 2;
+				right = (unsigned char)(left + (unsigned char)(right - left) / 2);
 			}
 			else if (seatString[i] == 'R') {
-				left = right - (right - left) / 2;
+				left = (unsigned char)(right - (unsigned char)(right - left) / 2);
 			}
 			else {
 				std::cout << "this row is FUCKED: " << seatString << std::endl;
