@@ -74,10 +74,23 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <MultiProcNumber>8</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <MultiProcNumber>8</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <MultiProcNumber>8</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <MultiProcNumber>8</MultiProcNumber>
+  </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="Computer.cpp" />
     <ClCompile Include="FileUtil.cpp" />
     <ClCompile Include="Gameboy.cpp" />
+    <ClCompile Include="GameOfLife.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Problem1.cpp" />
     <ClCompile Include="Problem10.cpp" />
@@ -87,6 +100,7 @@
     <ClCompile Include="Problem14.cpp" />
     <ClCompile Include="Problem15.cpp" />
     <ClCompile Include="Problem16.cpp" />
+    <ClCompile Include="Problem17.cpp" />
     <ClCompile Include="Problem2.cpp" />
     <ClCompile Include="Problem3.cpp" />
     <ClCompile Include="Problem4.cpp" />
@@ -104,6 +118,7 @@
     <ClInclude Include="Computer.h" />
     <ClInclude Include="FileUtil.h" />
     <ClInclude Include="Gameboy.h" />
+    <ClInclude Include="GameOfLife.h" />
     <ClInclude Include="Problems.h" />
     <ClInclude Include="Ship.h" />
     <ClInclude Include="WaitingArea.h" />
