@@ -35,6 +35,8 @@ namespace AOC2020 {
 		for (unsigned i = 0; i < 6; i++) {
 			gol4d.step();
 		}
+		std::cout << "Final state: " << std::endl;
+		std::cout << gol4d;
 
 		std::cout << "Active cubes after 6 steps (4 dimensions): " << gol4d.activeCount() << std::endl;
 

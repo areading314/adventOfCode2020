@@ -21,4 +21,10 @@ namespace AOC2020 {
 	int Problem17();
 	int Problem18();
 	int Problem19();
+	int Problem20();
+	int Problem21();
+	int Problem22();
+	int Problem23();
+	int Problem24();
+	int Problem25();
 }
