@@ -96,7 +96,7 @@ namespace AOC2020 {
 		}
 		for (int i = 0; i < 10000000; i++) {
 			move(circle, 1000000, positions);
-			if (i % 10000 == 0) std::cout << "iteration: " << i << std::endl;
+			if (i % 100000 == 0) std::cout << "iteration: " << i << std::endl;
 		}
 		positions.clear();
 		while (*circle.begin() != 1) {
